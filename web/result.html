@@ -21,6 +21,7 @@
         <link href="owl-carousel/owl.theme.css" rel="stylesheet">
 
         <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/ico/logo-icon-32.png">
 	</head>
 	
 	<body>
@@ -31,20 +32,19 @@
   </div>
   
   <hr>
-    <div id="demo">
-        <div class="container">
-            <div class="row">
-                <div class="span12">
-                    <div id="owl-demo" class="owl-carousel">
-
-                        <div class="item"><img src="assets/img/logo1.png" alt="The Last of us"></div>
-                        <div class="item"><img src="assets/img/logo1.png" alt="GTA V"></div>
-                        <div class="item"><img src="assets/img/logo1.png" alt="Mirror Edge"></div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="owl-carousel" >
+        <div class="item"><h4>1</h4></div>
+        <div class="item"><h4>2</h4></div>
+        <div class="item"><h4>3</h4></div>
+        <div class="item"><h4>4</h4></div>
+        <div class="item"><h4>5</h4></div>
+        <div class="item"><h4>6</h4></div>
+        <div class="item"><h4>7</h4></div>
+        <div class="item"><h4>8</h4></div>
+        <div class="item"><h4>9</h4></div>
+        <div class="item"><h4>10</h4></div>
+        <div class="item"><h4>11</h4></div>
+        <div class="item"><h4>12</h4></div>
     </div>
 
     <script src="assets/js/jquery-1.9.1.min.js"></script>
@@ -52,50 +52,26 @@
 
 
     <!-- Demo -->
-
-    <style>
-        #owl-demo .item img{
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-    </style>
-
-
     <script>
-        $(document).ready(function() {
-            $("#owl-demo").owlCarousel({
-
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
                 navigation : true,
                 slideSpeed : 300,
                 paginationSpeed : 400,
-                singleItem : true,
-                responsiveClass:true,
                 responsive:{
                     0:{
-                        items:1,
-                        nav:true
+                        items:1
                     },
                     600:{
-                        items:3,
-                        nav:false
+                        items:3
                     },
                     1000:{
-                        items:5,
-                        nav:true,
-                        loop:false
+                        items:5
                     }
                 }
-
-                // "singleItem:true" is a shortcut for:
-                // items : 1,
-                // itemsDesktop : false,
-                // itemsDesktopSmall : false,
-                // itemsTablet: false,
-                // itemsMobile : false
-
             });
-        });
     </script>
 </div>
 
