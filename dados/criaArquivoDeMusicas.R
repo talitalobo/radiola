@@ -25,3 +25,4 @@ for(iarq in 1:length(arquivos)){
 
 
 todasMusicas <- rbind(novoArquivo,novoArquivo2)
+write.table(todasMusicas, "musicas.csv",sep=";",quote = F,row.names = F)
