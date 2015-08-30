@@ -68,13 +68,14 @@ h1 {
 }
 
 .item {
-	font-size: 1.4 rem;
+	font-size: 1.4rem;
 	color: #6E8B9C;
 }
 
 .title {
-	font-size: 1.9 rem;
+	font-size: 2.5rem;
 	font-weight: 700;
+	color: #0C4F75;
 }
 
 ul {
@@ -82,12 +83,12 @@ ul {
 }
 
 nav ul {
-	height: 420px;
+	height: 421px;
 }
 
 nav ul {
-	overflow: hidden;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 h4 {
@@ -97,6 +98,6 @@ h4 {
 
 .list-container {
 	background-color: #fff;
-	border-radius: 5px;
+	border-radius: 7px;
 }
 
