@@ -26,6 +26,12 @@ h1 {
 	font-weight: 550;
 }
 
+
+
+.menu {
+	bottom: 0;
+}
+
 .selecionado {
     background-color: red;
 }
@@ -93,6 +99,10 @@ nav ul {
 nav ul {
 	overflow-y: scroll;
 	overflow-x: hidden;
+}
+
+li:hover { 
+    background-color: #F2BBBB;
 }
 
 h4 {
