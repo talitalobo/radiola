@@ -6,7 +6,7 @@
 
             return {
                 getData: function(ano){
-                    return $http.get("http://appradiola.appspot.com/get_playlist/" + ano)
+                    return $http.get("data/ano_musicas.json")
                         .success(function(data){
                         })
                         .error(function(err){

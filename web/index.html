@@ -33,23 +33,16 @@
     <script src="angular/directive/playlist.js"></script>
     <script src="angular/service/playlistService.js"></script>
 
-		<div class="container-full">
+
+		<div class="container-full" ng-show="index">
 
 			<div class="row">
 
 				<div class="col-lg-12 text-center v-center">
 
-					<img src="assets/img/logo1.png" height="180px" />
+					<img src="assets/img/logo1.png" height="180px" ng-click="index = true"/>
 					<!--<p class="lead"><img src="assets/img/SL2.png" height="15px" />-->
 					</p>
-                    <a href="result.html">res</a>
-					<br>
-					<br>
-					<br>
-
-                    <h1>{{ano}}</h1>
-
-
 
 					<form class="col-lg-12" ng-submit="update()">
 						<div class="input-group" style="width:400px;text-align:center;margin:0 auto;">
@@ -69,5 +62,15 @@
 
 
 		</div>
+
+    <div class="container" ng-hide="index">
+        <div class="logo">
+            <img src="assets/img/logo1.png" height="90px"/>
+        </div>
+
+        <hr>
+        <playlist></playlist>
+
+    </div>
 	</body>
 </html>
