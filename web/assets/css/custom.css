@@ -25,7 +25,6 @@ h1 {
 	color: #FF6B6B;
 	font-weight: 550;
 }
-
 /* Custom container */
 .container-full {
 	margin: 0 auto;
@@ -89,6 +88,10 @@ nav ul {
 nav ul {
 	overflow-y: scroll;
 	overflow-x: hidden;
+}
+
+li:hover { 
+    background-color: #F2BBBB;
 }
 
 h4 {
