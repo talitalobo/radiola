@@ -17,10 +17,15 @@ h1 {
 	margin-top: 2rem;
 }
 
-.info {
-	
+.titulo {
+	color: #0C4F75;
+	font-weight: 700;
 }
 
+.artista {
+	color: #FF6B6B;
+	font-weight: 550;
+}
 
 /* Custom container */
 .container-full {
@@ -78,7 +83,7 @@ ul {
 
 h4 {
     font-weight: 700;
-    color: #116391;
+    color: #0C4F75;
 }
 
 .list-container {
