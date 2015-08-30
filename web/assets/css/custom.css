@@ -1,16 +1,15 @@
-html,body {
-  height:100%;
-  background-color: #fff;
+html, body {
+	height: 100%;
+	background-color: #fff;
 }
 
 h1 {
-  font-family: Arial,sans-serif
-  font-size:80px;
-  color:#DDCCEE;
+	font-family: Arial, sans-serif font-size :80px;
+	color: #DDCCEE;
 }
 
 .lead {
-	color:#031634;
+	color: #031634;
 }
 
 .logo {
@@ -29,69 +28,75 @@ h1 {
 
 /* Custom container */
 .container-full {
-  margin: 0 auto;
-  width: 100%;
-  min-height:100%;
-  background-color:#fff;
-  color:#eee;
-  overflow:hidden;
+	margin: 0 auto;
+	width: 100%;
+	min-height: 100%;
+	background-color: #fff;
+	color: #eee;
+	overflow: hidden;
 }
 
 .container-full a {
-  color:#efefef;
-  text-decoration:none;
+	color: #efefef;
+	text-decoration: none;
 }
 
 .v-center {
-  margin-top:7%;
+	margin-top: 7%;
 }
-  
+
 .ano {
 	color: #336E7B;
 	font-size: 3rem;
 }
 
+.scroll {
+	overflow-y: scroll;
+}
 
 /*.video{
-    width:600px;
-    height:360px;
-    float: left;
-}*/
+ width:600px;
+ height:360px;
+ float: left;
+ }*/
 
 .playlist {
-    background-color: #000000;
-    width: 300px;
-    height: 480px;
-
-    margin-left: 800px;
-
+	background-color: #000000;
+	width: 300px;
+	height: 480px;
+	margin-left: 800px;
 }
 
 .item {
-    font-size: 1.4rem;
-    color: #6E8B9C;
+	font-size: 1.4 rem;
+	color: #6E8B9C;
 }
 
 .title {
-    font-size: 1.9rem;
-    font-weight: 700;
+	font-size: 1.9 rem;
+	font-weight: 700;
 }
 
 ul {
-    list-style-type: none;
+	list-style-type: none;
+}
+
+nav ul {
+	height: 420px;
+}
+
+nav ul {
+	overflow: hidden;
+	overflow-y: scroll;
 }
 
 h4 {
-    font-weight: 700;
-    color: #0C4F75;
+	font-weight: 700;
+	color: #0C4F75;
 }
 
 .list-container {
-    background-color: #fff;
-    border-radius: 5px;
+	background-color: #fff;
+	border-radius: 5px;
 }
-
-
-
-
 
