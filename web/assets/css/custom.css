@@ -26,10 +26,6 @@ h1 {
 	font-weight: 550;
 }
 
-.selecionado {
-    background-color: red;
-}
-
 /* Custom container */
 .container-full {
 	margin: 0 auto;

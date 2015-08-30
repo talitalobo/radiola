@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module("Radiola.controllers")
-        .controller("MainController", ["$scope", "playlist", "$sce", function($scope, playlist, $sce){
+        .controller("MainController", ["$scope", "playlist", "$sce", "$timeout", function($scope, playlist, $sce, $timeout){
             $scope.ano = "";
             $scope.playlist = [];
             $scope.video = {};
@@ -11,7 +11,6 @@
             var inicioDados = 1958;
             var fimDados = 2014;
             $scope.index = true;
-
 
             //gambiarra, ajeitar api
 
@@ -29,10 +28,16 @@
 
                     getAnosAdolescencia(data, inicioAdl, fimAdl);
 
-                    $scope.video = $scope.playlist[0];
-                    $scope.srcVideo = "https://www.youtube.com/embed/" + $scope.video.video_id + "?rel=0&autoplay=1";
-                    $scope.index = false;
+                    if($scope.playlist.length != 0){
 
+                        $scope.video = $scope.playlist[0];
+                        $scope.srcVideo = "https://www.youtube.com/embed/" + $scope.video.video_id + "?rel=0&autoplay=1";
+                        $scope.index = false;
+                    }else{
+                        $timeout(function () {
+                            window.alert("Data inválida. A data precisa estar no intervalo de 1938-2001");
+                        });
+                    }
                 });
 
             };
