@@ -10,7 +10,7 @@ from oauth2client.tools import argparser
 # tab of
 #   https://cloud.google.com/console
 # Please ensure that you have enabled the YouTube Data API for your project.
-DEVELOPER_KEY = "AIzaSyD21PK5rAQrFoNU_vVQAWkQoS4X8pRj9Es"
+DEVELOPER_KEY = "AIzaSyA90uF9s5fXA6dQD31wHVipi6s_BKd5L5c"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
@@ -34,7 +34,7 @@ for line in lines:
   titulo = line.split(";")[1].strip()
   artista = line.split(";")[2].strip()
   idVideo = youtube_search(titulo + " - " + artista)
-  result=titulo+";"+artista+";"+idVideo+"\n"
+  result = line.strip() + ";" + idVideo + "\n"
   print counter
   print result
   output.write(result)
