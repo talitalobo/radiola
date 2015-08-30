@@ -25,4 +25,7 @@ for(iarq in 1:length(arquivos)){
 
 
 todasMusicas <- rbind(novoArquivo,novoArquivo2)
-write.table(todasMusicas, "musicas.csv",sep=";",quote = F,row.names = F)
+
+write.table(todasMusicas, "musicas.csv",sep=";",quote = F,row.names = F, fileEncoding = "UTF-8")
+
+write.table(unique(todasMusicas$artista), "artistas.csv",quote = F,row.names = F, fileEncoding = "UTF-8", col.names = F)
