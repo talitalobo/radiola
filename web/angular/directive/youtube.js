@@ -9,12 +9,13 @@
                 scope: {
                     height: "@",
                     width: "@",
-                    videoid: "@"
+                    videoid: "@",
+                    onChange: '&'
                 },
 
                 template: '<div></div>',
 
-                link: function(scope, element, attrs, $rootScope) {
+                link: function(scope, element, attrs, $rootScope, $scope) {
                     var tag = document.createElement('script');
                     tag.src = "https://www.youtube.com/iframe_api";
                     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -61,9 +62,8 @@
                     // when video ends
                     function onPlayerStateChange(event) {
                         if (event.data === 0) {
-                            console.log('finsihed');
+                            scope.onChange();
 
-                            alert('done');
                         }
                     }
 

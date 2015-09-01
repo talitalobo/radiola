@@ -6,11 +6,41 @@
         <iframe class="video" src="https://www.youtube.com/embed/DU6UV2GPzIk?rel=0&autoplay=1"></iframe>-->
 
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" ng-src="{{trustSrc(srcVideo)}}" id="player">
-            </iframe>
-            <!--<youtube width="640" height="390" videoid="{{video.video_id}}" id="player"></youtube>-->
+            <!--<iframe class="embed-responsive-item" ng-src="{{trustSrc(srcVideo)}}" id="player">-->
+            <!--</iframe>-->
+            <youtube width="640" height="390" videoid="{{video.video_id}}" on-change="videoTerminou()" id="player"></youtube>
 
         </div>
     </div>
+
+    <div class="col-md-4 list-container">
+        <div class="title">
+            <!-- se quiser colocar um titulo na play -->
+        </div>
+		<nav>
+        <ul class="list-group">
+            <li class="list-group-item item" ng-repeat="musica in playlist">
+                <div ng-click="setVideo(musica)">
+
+                    <h4>{{musica.song}}</h4>
+                    {{musica.artist}}
+                </div>
+
+            </li>
+        </ul>
+        </nav>
+
+    </div>
 </div>
+
+<div class="row">
+    <div class="col-md-7s">
+        <h3>
+            <span class="titulo">{{video.song}}</span>
+            <span class="artista">{{video.artist}}</span>
+        </h3>
+        <h4>
+            {{video.year}}
+        </h4>
+    </div>
 </div>
