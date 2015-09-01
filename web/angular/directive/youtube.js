@@ -52,7 +52,8 @@
                             return;
                         }
 
-                        player.cueVideoById(scope.videoid);
+                        //carrega o video pela id: https://developers.google.com/youtube/js_api_reference
+                        player.loadVideoById(scope.videoid);
 
                     });
 
