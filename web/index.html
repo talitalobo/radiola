@@ -20,6 +20,8 @@
         <!-- script references -->
         <script src="assets/js/jquery-1.9.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+
+        <!--Google Analytics-->
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,14 +29,15 @@
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
          </script>
+        <script>
+            ga('create', 'UA-66951250-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+
         <!--Youtube-->
         <script src="http://www.youtube.com/player_api"></script>
-        <script>document.write('<base href="' + document.location + '" />');</script>
 
-        <script>
-			ga('create', 'UA-66951250-1', 'auto');
-			ga('send', 'pageview');
-		</script>
 
 
     </head>
@@ -49,7 +52,6 @@
     <script src="angular/directive/youtube.js"></script>
     <!--Services-->
     <script src="angular/service/playlistService.js"></script>
-    <script src="angular/service/youtubeService.js"></script>
 
 
 		<div class="container-full" ng-show="index">

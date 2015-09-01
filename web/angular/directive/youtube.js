@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module("Radiola.directives")
-        .directive('youtube', function($window, youTubeApiService) {
+        .directive('youtube', function($window) {
             return {
                 restrict: "E",
 
@@ -15,7 +15,7 @@
 
                 template: '<div></div>',
 
-                link: function(scope, element, attrs, $rootScope, $scope) {
+                link: function(scope, element, attrs, $rootScope) {
                     var tag = document.createElement('script');
                     tag.src = "https://www.youtube.com/iframe_api";
                     var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -23,14 +23,11 @@
 
                     var player;
 
-                    youTubeApiService.onReady(function() {
-                        player = setupPlayer(scope, element);
-                    });
+                    $window.onYouTubeIframeAPIReady = function() {
 
-                    function setupPlayer(scope, element) {
-                        return new YT.Player(element.children()[0], {
+                        player = new YT.Player(element.children()[0], {
                             playerVars: {
-                                autoplay: 0,
+                                autoplay: 1,
                                 html5: 1,
                                 theme: "light",
                                 modesbranding: 0,

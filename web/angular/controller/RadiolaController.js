@@ -15,11 +15,13 @@
 
             $scope.videoTerminou = function(){
               var indexVideo = $scope.playlist.indexOf($scope.video);
+
                 if(indexVideo != $scope.playlist.length-1){
                     $scope.setVideo($scope.playlist[indexVideo+1]);
                 }else{
                     $scope.setVideo($scope.playlist[0]);
                 }
+                $scope.$apply();
             };
 
             $scope.trustSrc = function(src) {
@@ -54,6 +56,7 @@
             $scope.setVideo = function(musica){
                 $scope.video = musica;
                 $scope.srcVideo = "https://www.youtube.com/embed/" + musica.video_id + "?rel=0&autoplay=1";
+
 
             };
 
