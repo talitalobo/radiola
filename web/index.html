@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" ng-app="Radiola">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
+ <html  ng-app="Radiola">
+    <head>
+        <meta charset="UTF-8">
 		<title>Radiola - Reviva!</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -17,10 +15,15 @@
         <!-- Include the Angular JS library -->
         <script type="text/javascript" src="assets/js/angular.min.js"></script>
         <script type="text/javascript" src="assets/js/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="assets/js/angular-route.min.js"></script>
 
         <!-- script references -->
         <script src="assets/js/jquery-1.9.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
+
+        <!--Youtube-->
+        <script src="http://www.youtube.com/player_api"></script>
+        <script>document.write('<base href="' + document.location + '" />');</script>
 
 
     </head>
@@ -30,8 +33,11 @@
     <script src="angular/module/app.js"></script>
     <script src="angular/router/router.js"></script>
     <script src="angular/controller/RadiolaController.js"></script>
+    <script src="angular/controller/IndexController.js"></script>
     <script src="angular/directive/playlist.js"></script>
+    <script src="angular/directive/youtube.js"></script>
     <script src="angular/service/playlistService.js"></script>
+    <script src="angular/service/youtubeService.js"></script>
 
 
 		<div class="container-full" ng-show="index">
@@ -50,11 +56,13 @@
 							placeholder="Insira seu ano de nascimento :)" type="text" ng-model="ano">
 
 							<span class="input-group-btn">
-								<button class="btn btn-lg btn-primary" type="submit">
-									Buscar!
+								<button class="btn btn-lg btn-primary" type="submit">Buscar!
+
 								</button> </span>
 						</div>
 					</form>
+
+
 					
 				</div>
 
@@ -63,20 +71,21 @@
 
 		</div>
 
+
     <div class="container" ng-hide="index">
         <div class="row menu">
-	        <div class="col-lg-6">
-		        <div class="logo">
-		            <a href="index.html">
-		            	<img src="assets/img/logo1.png" height="90px"/>
-		            </a>
-		        </div>
-			</div>
-			
-		</div>
+            <div class="col-lg-6">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assets/img/logo1.png" height="90px"/>
+                    </a>
+                </div>
+            </div>
+
+        </div>
         <hr>
-    
-    <playlist></playlist>
+
+        <playlist></playlist>
 
     </div>
 	</body>

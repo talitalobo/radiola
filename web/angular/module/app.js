@@ -3,7 +3,7 @@
 
     // create the angular app
     angular.module("Radiola", [
-        'ui.router',
+        'ngRoute',
         'Radiola.controllers',
         'Radiola.directives'
     ]);
