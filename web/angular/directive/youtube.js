@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module("Radiola.directives")
-        .directive('youtube', function($window) {
+        .directive('youtube', function($window, youTubeApiService) {
             return {
                 restrict: "E",
 
@@ -23,9 +23,12 @@
 
                     var player;
 
-                    $window.onYouTubeIframeAPIReady = function() {
+                    youTubeApiService.onReady(function() {
+                        player = setupPlayer(scope, element);
+                    });
 
-                        player = new YT.Player(element.children()[0], {
+                    function setupPlayer(scope, element) {
+                        return new YT.Player(element.children()[0], {
                             playerVars: {
                                 autoplay: 1,
                                 html5: 1,
@@ -52,9 +55,8 @@
                             return;
                         }
 
-                        //carrega o video pela id: https://developers.google.com/youtube/js_api_reference
-                        player.loadVideoById(scope.videoid);
-
+                            //carrega o video pela id: https://developers.google.com/youtube/js_api_reference
+                            player.loadVideoById(scope.videoid);
                     });
 
                     // when video ends
